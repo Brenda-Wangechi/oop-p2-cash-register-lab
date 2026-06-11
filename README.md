@@ -1,3 +1,36 @@
+# Cash Register Lab
+
+This repository contains a simple `CashRegister` implementation and tests for an object-oriented programming lab.
+
+What's included
+- `lib/cash_register.py` — main implementation of `CashRegister`.
+- `cash_register.py` — top-level compatibility module that re-exports `CashRegister` (so `from cash_register import CashRegister` works).
+- `lib/testing/cash_register_test.py` — test cases written for the lab.
+- `run_tests_no_pytest.py` — a small test runner that executes the test methods without requiring `pytest` (useful if you can't install packages system-wide).
+
+Running tests
+
+1) Run tests without installing pytest (recommended if your environment is restricted):
+
+```bash
+python3 run_tests_no_pytest.py
+```
+
+2) Run with `pytest` (if you can install packages or have a virtualenv):
+
+```bash
+# create a venv, activate it, then install pytest
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pytest
+pytest -q
+```
+
+Notes
+- The top-level `cash_register.py` was added as a small compatibility shim so tests that import `cash_register` find the implementation in `lib/cash_register.py`.
+- `run_tests_no_pytest.py` preserves test method order and prints pass/fail results similar to pytest, but is intentionally minimal.
+
+If you'd like, I can add a simple GitHub Actions workflow to run tests on push.
 # Object Oriented Programming (OOP) Part 2 - Cash Register Lab
 
 Now that we’ve discussed more about object oriented design philosophies and techniques like decorators we will be looking at building more complex objects. In this case we will be building a cash register object to simulate different functions of a cash register for an e-commerce site. 
