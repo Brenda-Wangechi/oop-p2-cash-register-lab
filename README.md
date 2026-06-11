@@ -121,3 +121,21 @@ Before you submit your solution, you need to save your progress with git.
 4. When you are ready to submit, click the ***Load Lab: Object Oriented Programming (OOP)- Part 2- Cash Register*** button in Canvas to launch CodeGrade.
   * Click on + Create Submission. Connect your repository for this lab.
   * For additional information on submitting assignments in CodeGrade: [Getting Started in Canvas](https://help.codegrade.com/for-students/getting-started/getting-started-in-canvas).
+
+## Usage
+
+This repository includes a `CashRegister` class implementation in `lib/cash_register.py`.
+
+Example usage:
+
+```python
+from cash_register import CashRegister
+
+register = CashRegister(20)  # 20% discount available
+register.add_item('laptop', 1000)
+register.apply_discount()  # prints: After the discount, the total comes to $800.
+```
+
+Screenshot of the basic output and class behavior:
+
+![CashRegister Screenshot](images/screenshot.svg)
